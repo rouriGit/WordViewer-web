@@ -12,7 +12,7 @@ let choice = "";
 // オプション選択画面を表示する関数
 function showChoiceScreen() {
     document.getElementById("content").innerHTML = `
-        // <h1>どっち？</h1>
+        <h1>どっち？</h1>
         <button onclick="chooseOption('reading')">読み</button>
         <button onclick="chooseOption('compound')">熟語</button>
     `;
