@@ -1,8 +1,8 @@
 // 最初の画面（WordViewerStart）を表示する関数
 function showStartScreen() {
     document.getElementById("content").innerHTML = `
-        <h1>Welcome to WordViewer</h1>
-        <button onclick="showChoiceScreen()">Start</button>
+        <h1>WordViewer</h1>
+        <button onclick="showChoiceScreen()">スタート</button>
     `;
 }
 
@@ -12,7 +12,7 @@ let choice = "";
 // オプション選択画面を表示する関数
 function showChoiceScreen() {
     document.getElementById("content").innerHTML = `
-        <h1>どっち</h1>
+        // <h1>どっち？</h1>
         <button onclick="chooseOption('reading')">読み</button>
         <button onclick="chooseOption('compound')">熟語</button>
     `;
@@ -22,7 +22,7 @@ function showChoiceScreen() {
 function chooseOption(selectedChoice) {
     choice = selectedChoice;
     document.getElementById("content").innerHTML = `
-        <h1>Choose Your Grade</h1>
+        <h1>何年生？</h1>
         <button onclick="showWordViewer(1)">1年生</button>
         <button onclick="showWordViewer(2)">2年生</button>
         <button onclick="showWordViewer(3)">3年生</button>
