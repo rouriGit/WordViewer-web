@@ -320,8 +320,29 @@ function showWordViewer(grade) {
 
     // 漢字表示画面のHTMLを設定
     document.getElementById("content").innerHTML = `
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div id="word-label" class="word-label"></div>
-        <button onclick="showChoiceScreen()">Start Over</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button onclick="showChoiceScreen()">学年を変える</button>
     `;
 
     // 初期化
