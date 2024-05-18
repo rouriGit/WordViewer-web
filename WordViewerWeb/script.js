@@ -1,8 +1,8 @@
 // 最初の画面（WordViewerStart）を表示する関数
 function showStartScreen() {
     document.getElementById("content").innerHTML = `
-        <h1>WordViewer</h1>
-        <button onclick="showChoiceScreen()">スタート</button>
+        <h1>Welcome to WordViewer</h1>
+        <button onclick="showChoiceScreen()">Start</button>
     `;
 }
 
@@ -12,7 +12,7 @@ let choice = "";
 // オプション選択画面を表示する関数
 function showChoiceScreen() {
     document.getElementById("content").innerHTML = `
-        <h1>どっち？</h1>
+        <h1>Choose an Option</h1>
         <button onclick="chooseOption('reading')">読み</button>
         <button onclick="chooseOption('compound')">熟語</button>
     `;
@@ -22,7 +22,7 @@ function showChoiceScreen() {
 function chooseOption(selectedChoice) {
     choice = selectedChoice;
     document.getElementById("content").innerHTML = `
-        <h1>何年生？</h1>
+        <h1>Choose Your Grade</h1>
         <button onclick="showWordViewer(1)">1年生</button>
         <button onclick="showWordViewer(2)">2年生</button>
         <button onclick="showWordViewer(3)">3年生</button>
@@ -318,6 +318,22 @@ function showWordViewer(grade) {
         }
     }
 
+    // ボタン操作を処理する関数
+    function handleButtonPress(direction) {
+        if (direction === 'right') {
+            currentIndex = Math.min(currentIndex + 1, wordList.length - 1);
+            randomIndex = Math.floor(Math.random() * 5) + 2; // 2から6のランダムな整数
+            updateWordLabel();
+        } else if (direction === 'left') {
+            currentIndex = Math.max(currentIndex - 1, 0);
+            randomIndex = Math.floor(Math.random() * 5) + 2; // 2から6のランダムな整数
+            updateWordLabel();
+        } else if (direction === 'space') {
+            isSpacePressed = !isSpacePressed;
+            updateWordLabel();
+        }
+    }
+
     // 漢字表示画面のHTMLを設定
     document.getElementById("content").innerHTML = `
         <br>
@@ -328,7 +344,11 @@ function showWordViewer(grade) {
         <br>
         <br>
         <br>
+        <br>
         <div id="word-label" class="word-label"></div>
+        <button id="left-button">←</button>
+        <button id="space-button">答え</button>
+        <button id="right-button">→</button>
         <br>
         <br>
         <br>
@@ -344,6 +364,11 @@ function showWordViewer(grade) {
         <br>
         <button onclick="showChoiceScreen()">学年を変える</button>
     `;
+
+    // ボタンにイベントリスナーを追加
+    document.getElementById('left-button').addEventListener('click', () => handleButtonPress('left'));
+    document.getElementById('space-button').addEventListener('click', () => handleButtonPress('space'));
+    document.getElementById('right-button').addEventListener('click', () => handleButtonPress('right'));
 
     // 初期化
     updateWordLabel();
