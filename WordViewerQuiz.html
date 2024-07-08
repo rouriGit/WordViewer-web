@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Viewer Quiz</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="showWordViewerQuiz()">
+    <div id="contentQuiz" class="vertical-layout">
+        <div id="phrase-label" class="phrase-label"></div>
+        <div id="result" class="result-message hidden"></div>
+        <input type="range" id="example" min="1" max="3" step="1" oninput="checkAnswer()">
+
+        <button id="revenge-button" onclick="showWordViewerQuiz()">間違えたトコだけもう一回！</button>
+    </div>
+    <div>
+        <button onclick="backMenu()">メニューにもどる</button>
+    </div>
+
+    <script src="WordViewerQuiz.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Viewer Quiz</title>
+    <style>
+        /* Typing animation */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .typing {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid;
+            animation: typing 3s steps(6) -0.5s 1 normal both;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="showWordViewerQuiz()">
+    <div id="contentQuiz" class="vertical-layout">
+        <div id="phrase-label" class="phrase-label"></div>
+        <div id="result" class="result-message hidden"></div>
+        <input type="range" id="example" min="1" max="3" step="1" oninput="checkAnswer()">
+        <button id="revenge-button" class="hidden">間違えたトコだけもう一回！</button>
+    </div>
+    <div>
+        <button onclick="backMenu()">メニューにもどる</button>
+    </div>
+
+    <script src="WordViewerQuiz.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

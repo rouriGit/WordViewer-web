@@ -1,0 +1,204 @@
+/* .container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.word-label {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+} */
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.word-label {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    /* Styles for tablets and small desktops */
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .word-label {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Styles for smartphones */
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    .word-label {
+        font-size: 18px;
+    }
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    background: #8acdff;
+    height: 14px;
+    width: 400px;
+    border-radius: 10px;
+    border: solid 3px #dff1ff;
+  
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: #53aeff;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+    }
+  
+    &::-moz-range-thumb {
+      background: #53aeff;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+      border: none;
+    }
+  
+    &::-moz-focus-outer {
+      border: 0;
+    }
+  
+    &:active::-webkit-slider-thumb {
+      box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+
+
+
+
+
+
+/* Tinder風のデザイン */
+.word-label {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result-message {
+    font-size: 32px;
+    font-family: 'Arial', sans-serif;
+    color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.correct {
+    color: #4CAF50; /* 正解メッセージのテキスト色 */
+}
+
+.wrong {
+    color: #f44336; /* 不正解メッセージのテキスト色 */
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #f44336; /* ボタンの背景色 */
+    color: #fff; /* ボタンのテキスト色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #d32f2f; /* ホバー時の背景色 */
+}
+
+
+
+
+.dropdown-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
